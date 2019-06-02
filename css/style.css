@@ -1,0 +1,167 @@
+@import "normalize.css";
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0 auto;
+    max-width: 1024px;
+}
+
+li {
+    list-style: none;
+    padding-left: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+nav {
+    font-family: Roboto, Arial, Verdana;
+    font-weight: 400;
+    letter-spacing: 0.5em;
+    background-color: whitesmoke;
+    padding: 25px;
+}
+
+h1, .top-nav {
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
+    text-transform: uppercase;
+
+    
+}
+
+.top-nav, .top-nav li{
+    width: 100%;
+}
+
+h1 a {
+    color: #000;
+}
+
+.top-nav {
+    margin-top: 30px;
+}
+
+.top-nav li { 
+    padding: 10px 0 10px;
+    margin: 5px auto;
+    background: #fff;
+}
+
+.top-nav a {
+    text-transform: uppercase;
+    color: #000;
+}
+
+
+.profile,
+.profile-text, img {
+    max-width: 900px;
+    padding-top: 20px;
+    text-align: center; 
+}
+
+p {
+    font-weight: 300px;
+    font-size: 25px;
+    font-family: 'Bitter', serif;
+    padding: 4%;
+    line-height: 1.5em;
+    text-align: center;
+}
+
+.portfolio, 
+.portfolio img {
+    max-width: 100%;
+    text-align: center;
+}
+
+.portfolio p {
+    padding: 20px;
+    max-width: 900px;
+    text-align: center;
+    font-size: 22px;
+    font-family: Roboto, Arial, Verdana;
+}
+
+.contact {
+    background-color: whitesmoke;
+    text-align: center;
+    padding: 20px;
+    color: slategray;
+    font-size: 22px;
+    line-height: 1.5em;
+}
+
+.bottom-nav {
+    float: right;
+}
+footer,
+.bottom-nav {
+    padding: 10px;
+}
+
+
+
+
+@media (min-width: 768px) {
+    .top-nav {
+        margin-top: 0;
+    }
+
+    .top-nav li {
+        display: inline-block;
+        width: auto;
+        margin-right: 15px;
+        background-color: transparent;
+    }
+
+    .top-nav li:last-child {
+        margin-right: 0;
+    }
+
+    .top-nav a {
+        color: #000;
+    }
+
+    .market,
+    .search,
+    .travelapp,
+    .mapspot,
+    .photo,
+    .cal {
+        display: inline-block;
+        max-width: 33%;
+        vertical-align: top;
+    }
+}
+
+@media (min-width: 1024px) {
+    h1{
+        float: left;
+        text-align: left;
+        height: 12px;
+        line-height: 12px;
+    }
+
+    .top-nav {
+        text-align: right;
+    }
+    
+    .profile {
+        float: right;
+    }
+
+    .profile-text {
+        float: left;
+        text-align: left;
+    }
+
+}
