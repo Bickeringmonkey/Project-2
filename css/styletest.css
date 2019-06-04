@@ -4,12 +4,6 @@
     box-sizing: border-box;
 }
 
-/* 
-============================
-Main Content Styles
-============================
-*/
-
 body {
     margin: 0 auto;
     max-width: 1024px;
@@ -17,45 +11,42 @@ body {
 
 li {
     list-style: none;
+    padding-left: 0;
 }
 
 a {
     text-decoration: none;
 }
 
-h2 {
-    text-align: center;
-    text-transform: uppercase;
-}
-
-/*
-============================
-Navigation
-============================
-*/
-
 nav {
     font-family: Roboto, Arial, Verdana;
-    font-weight: 500;
-    letter-spacing: 0.3em;
+    font-weight: 400;
+    letter-spacing: 0.5em;
     background-color: whitesmoke;
     padding: 25px;
 }
 
-h1,
-.top-nav {
+h1, .top-nav {
     text-align: center;
 }
 
-.top-nav,
-.top-nav li {
+h2 {
+    text-align: center;
+    text-transform: uppercase;
+
+    
+}
+
+.top-nav, .top-nav li{
     width: 100%;
 }
 
-.top-nav a {
+h1 a {
     color: #000;
-    text-transform: uppercase;
-    line-height: 1.6em;
+}
+
+.top-nav {
+    margin-top: 30px;
 }
 
 .top-nav li { 
@@ -64,115 +55,76 @@ h1,
     background: #fff;
 }
 
-.top-nav ul {
-    margin: 0;
-    padding: 0;
+.top-nav a {
+    text-transform: uppercase;
+    color: #000;
 }
 
 
-/*
-===============================
-Hero Content
-===============================
-*/
-
-.hero-text {
-    text-align: center;
-    font-size: 25px;
-    padding: 10px;
-    line-height: 1.5em;
-}
-
-.hero-image {
+.profile,
+.profile-text, img {
     max-width: 900px;
     padding-top: 20px;
     text-align: center; 
 }
 
-/*
-===============================
-Portfolio
-===============================
-*/
+p {
+    font-weight: 300px;
+    font-size: 25px;
+    font-family: 'Bitter', serif;
+    padding: 4%;
+    line-height: 1.5em;
+    text-align: center;
+}
 
-.portfolio {
+.portfolio, 
+.portfolio img {
     max-width: 100%;
     text-align: center;
 }
 
-.portfolio-main p{
+.portfolio p {
     padding: 20px;
     max-width: 900px;
     text-align: center;
-    font-size: 20px;
-    font-family: 'Ubuntu', sans-serif;
+    font-size: 22px;
+    font-family: Roboto, Arial, Verdana;
 }
-
-.portfolio-main h3 {
-    text-align: center;
-    text-transform: uppercase;
-    font-weight: 500;
-    font-family: 'Ubuntu', sans-serif;
-}
-
-/*
-================================
-Contact
-================================
-*/
 
 .contact {
-    text-align: center;
     background-color: whitesmoke;
+    text-align: center;
+    padding: 15px;
     color: slategray;
-    padding: 10px;
     font-size: 22px;
+    line-height: 1.2em;
 }
 
-.contact h3 {
-    text-transform: uppercase;
-}
-
-/*
-================================
-Footer Styles
-================================
-*/
-
-footer h2 {
-    float: left;
-    font-size: 20px;
-    padding: 0 10px;
-    font-family: 'Ubuntu', sans-serif;
-}
-
-footer .top {
+.bottom-nav {
     float: right;
 }
+footer,
+.bottom-nav {
+    padding: 10px;
+}
 
-.footer-nav {
+.nav-bottom {
+    overflow: hidden;
+    transition: 0.7s all;
     display: none;
 }
 
-/*
-================================
-ClearFix
-================================
-*/
-.clearfix::after {
+/* Float Clearfix ------------------ */
+
+.group:after {
     content: "";
-    clear: both;
     display: table;
+    clear: both;
   }
 
-/*
-================================
-Media Queries
-================================
-*/
+
 
 @media (min-width: 768px) {
-   
     .top-nav {
         margin-top: 0;
     }
@@ -194,15 +146,15 @@ Media Queries
 
     .market,
     .search,
-    .travel,
-    .spot,
+    .travelapp,
+    .mapspot,
     .photo,
-    .calc {
+    .cal {
         display: inline-block;
         max-width: 33%;
         vertical-align: top;
     }
-    
+
     .container {
         width: 100%;
         margin: 0 auto;
@@ -212,16 +164,11 @@ Media Queries
         display: inline;
         text-decoration: none;
         list-style-type: none;
-        text-transform: uppercase;
-        float: right;
-        padding: 0;
-        background: transparent;
-        letter-spacing: 0.3em;
     }
 
     .footer-nav ul {
         display: inline-flex;
-        font-size: 20px;
+        font-size: 15px;
         text-align: right;
     }
     .footer-nav a {
@@ -229,13 +176,13 @@ Media Queries
         padding: 5px;
     }
 
-    .top {
+    .bottom-nav {
         display: none;
+        
     }
-
 }
 
-@media (min-width: 1024px){
+@media (min-width: 1024px) {
     h1{
         float: left;
         text-align: left;
@@ -244,20 +191,18 @@ Media Queries
         padding-left: 20px;
         padding-top: 19px;
     }
-    
+
     .top-nav {
         text-align: right;
     }
-
-    .hero-image {
+    
+    .profile {
         float: right;
     }
 
-    .hero-text p{
+    .portfolio p {
         float: left;
         text-align: left;
     }
 
 }
-
-
